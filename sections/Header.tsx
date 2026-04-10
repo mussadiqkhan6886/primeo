@@ -1,5 +1,6 @@
 'use client';
 
+import AwwwardsButton from '@/components/user/CTAButton';
 import { syne } from '@/libs/fonts'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -49,11 +50,7 @@ const Header = () => {
                 </nav>
 
                 {/* CTA */}
-                <div>
-                    <button className='bg-gold transition-all duration-300 rounded-lg text-white  px-4 py-1.5 cursor-pointer'>
-                        Book a Call
-                    </button>
-                </div>
+               <AwwwardsButton />
             </div>
         </header>
     )
