@@ -1,6 +1,7 @@
 import Footer from "@/sections/Footer";
 import Header from "@/sections/Header";
 import type { Metadata } from "next";
+import SmoothScroll from "../../components/user/ScrollSmooth";
 
 export const metadata: Metadata = {
   title: "Primeo | 8 layers architecture",
@@ -14,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    <Header />
-        {children}
-    <Footer />
+      <SmoothScroll>
+        <Header />
+            {children}
+        <Footer />
+      </SmoothScroll>
     </>
   );
 }
