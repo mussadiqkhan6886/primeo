@@ -5,3 +5,7 @@
   --color-warm: #F5EFE3;
   --color-gold: #E6AF50;
 }
+
+html{
+  scroll-behavior: smooth;
+}

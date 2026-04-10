@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { arimo } from "@/libs/fonts";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={`${arimo.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
