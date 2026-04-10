@@ -9,3 +9,8 @@
 html{
   scroll-behavior: smooth;
 }
+
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}
