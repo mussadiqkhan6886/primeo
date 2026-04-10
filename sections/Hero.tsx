@@ -4,10 +4,17 @@ import React from 'react';
 import { Easing, motion, Variant, Variants } from 'framer-motion';
 import { arimo, syne } from '@/libs/fonts';
 import {FiArrowRight} from "react-icons/fi"
+import { InfiniteMovingCards } from '@/components/ui/Loop';
 
 const Hero = () => {
   // Ultra-smooth easing for that premium agency feel
   const expo = [0.19, 1, 0.22, 1] as Easing;
+
+  const logos = [
+    "Forbes", "LinkedIn", "HBR", "McKinsey", 
+    "Wired", "TED", "Bloomberg", "Deloitte", 
+    "Fortune", "Inc.", "The Economist", "MIT"
+  ];
 
   const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -59,7 +66,7 @@ const Hero = () => {
           initial="initial"
           animate="animate"
           transition={{ delay: 0.6 }}
-          className="mt-10 max-w-2xl text-md md:text-lg  text-stone-300 font-light leading-snug"
+          className="mt-5 max-w-2xl text-md md:text-lg  text-stone-300 font-light leading-snug"
         >
           Be part of the world’s most powerful life transformation platform.
         </motion.p>
@@ -89,7 +96,21 @@ const Hero = () => {
           </button>
         </motion.div>
       </div>
-
+        <div className='absolute bottom-5'>
+          <InfiniteMovingCards items={logos} speed='normal' direction='left' />
+        </div>
+       <div 
+        className='absolute -bottom-40 -left-50 rounded-full w-100 h-100 blur-2xl opacity-70 pointer-events-none' 
+        style={{
+          background: 'radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%)'
+        }}
+      />
+       <div 
+        className='absolute -bottom-40 -right-50 rounded-full w-100 h-100 blur-2xl opacity-70 pointer-events-none' 
+        style={{
+          background: 'radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%)'
+        }}
+      />
     </section>
   );
 };
