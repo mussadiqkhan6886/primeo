@@ -10,11 +10,7 @@ const Hero = () => {
   // Ultra-smooth easing for that premium agency feel
   const expo = [0.19, 1, 0.22, 1] as Easing;
 
-  const logos = [
-    "Forbes", "LinkedIn", "HBR", "McKinsey", 
-    "Wired", "TED", "Bloomberg", "Deloitte", 
-    "Fortune", "Inc.", "The Economist", "MIT"
-  ];
+
 
   const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -96,9 +92,7 @@ const Hero = () => {
           </button>
         </motion.div>
       </div>
-        <div className='absolute bottom-5'>
-          <InfiniteMovingCards items={logos} speed='normal' direction='left' />
-        </div>
+      
        <div 
         className='absolute -bottom-40 -left-50 rounded-full w-100 h-100 blur-2xl opacity-70 pointer-events-none' 
         style={{

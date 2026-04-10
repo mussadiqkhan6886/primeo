@@ -15,7 +15,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <main className="bg-dark h-full">
+    <main className=" h-full">
       <Hero />
       <SocialProof />
       <Problems />
