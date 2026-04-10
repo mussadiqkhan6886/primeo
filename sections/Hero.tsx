@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Easing, motion, Variant, Variants } from 'framer-motion';
 import { arimo, syne } from '@/libs/fonts';
 import {FiArrowRight} from "react-icons/fi"
 
 const Hero = () => {
   // Ultra-smooth easing for that premium agency feel
-  const expo = [0.19, 1, 0.22, 1];
+  const expo = [0.19, 1, 0.22, 1] as Easing;
 
   const fadeUp = {
     initial: { opacity: 0, y: 40 },
     animate: { opacity: 1, y: 0, transition: { duration: 1.2, ease: expo } }
-  };
+  } as Variants
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
